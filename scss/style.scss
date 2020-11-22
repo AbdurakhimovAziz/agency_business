@@ -1,9 +1,9 @@
 @import 'fonts';
 @import 'nullstyle';
 @import 'header';
-body {
-    background-color: rgb(8, 216, 147);
-    font-size: 20px;
-    font-family: 'Helvetica Neue';
-    font-weight: 400;
+
+.container {
+    max-width: 1015px;
+    padding: 0 15px;
+    margin: 0 auto;
 }
