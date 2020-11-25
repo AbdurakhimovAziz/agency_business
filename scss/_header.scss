@@ -5,6 +5,20 @@
     }
 
     &__main {
+        background-color: #fff;
+        font-family: 'Helvetica Neue';
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 .sup-header {
@@ -59,5 +73,82 @@
         &:active {
             background-color: #0b5577;
         }
+    }
+}
+.logo {
+    &__img {
+        width: 75px;
+        height: 50px;
+        margin-right: 10px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        color: #424242;
+        transition: color 0.3s;
+        &:hover {
+            color: #de2b24;
+        }
+    }
+
+    &__text-top {
+        font-size: 37px;
+        font-weight: 700;
+    }
+
+    &__text-bot {
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list {
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 15px;
+        font-weight: 700;
+        margin-right: 32px;
+    }
+    &__list-item {
+        margin-right: 36px;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -18px;
+            width: 4px;
+            height: 4px;
+            background-color: #424242;
+            border-radius: 50%;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+                opacity: 0;
+            }
+            margin-right: 0;
+        }
+    }
+    &__link {
+        color: #424242;
+        transition: color 0.3s;
+        &:hover,
+        &:active {
+            color: #de2b24;
+        }
+    }
+
+    &__btn {
+        padding: 12px 22px;
     }
 }
