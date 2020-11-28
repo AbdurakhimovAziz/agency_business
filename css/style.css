@@ -142,7 +142,6 @@ h6 {
 
 .header__main {
   background-color: #fff;
-  font-family: 'Helvetica Neue';
 }
 
 .header__row {
@@ -255,12 +254,6 @@ h6 {
 
 .logo__text {
   color: #424242;
-  -webkit-transition: color 0.3s;
-  transition: color 0.3s;
-}
-
-.logo__text:hover {
-  color: #de2b24;
 }
 
 .logo__text-top {
@@ -339,6 +332,10 @@ h6 {
   padding: 12px 22px;
 }
 
+body {
+  font-family: 'Helvetica Neue';
+}
+
 .container {
   max-width: 1015px;
   padding: 0 15px;
@@ -347,6 +344,14 @@ h6 {
 
 .wrapper {
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
 }
 
 .btn {
@@ -360,7 +365,8 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 3px;
+  border: 1px solid #de2b24;
+  border-radius: 4px;
   font-weight: 700;
   font-size: 15px;
   color: #fff;
@@ -369,6 +375,62 @@ h6 {
 }
 
 .btn:hover {
-  background-color: #c20d0d;
+  background-color: #fff;
+  color: #de2b24;
+  border: 1px solid #de2b24;
+}
+
+.hero {
+  min-width: 100vw;
+  height: 600px;
+  background: url("../img/mainbg.jpg") center/cover no-repeat;
+}
+
+.hero_btn {
+  background-color: #f8cd53;
+  border: 1px solid #f8cd53;
+  font-size: 23px;
+  font-weight: 700;
+  padding: 20px 35px;
+  margin-top: 30px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.hero_btn:hover {
+  background-color: #fff;
+  border: 1px solid #f8cd53;
+  color: #f8cd53;
+}
+
+.hero__body {
+  background: rgba(18, 135, 191, 0.15);
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  z-index: 33;
+}
+
+.hero__title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 5spx;
+}
+
+.hero__text {
+  font-size: 30px;
+  font-weight: 300;
 }
 /*# sourceMappingURL=style.css.map */

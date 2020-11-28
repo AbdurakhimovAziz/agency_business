@@ -6,7 +6,6 @@
 
     &__main {
         background-color: #fff;
-        font-family: 'Helvetica Neue';
     }
 
     &__row {
@@ -87,10 +86,6 @@
 
     &__text {
         color: #424242;
-        transition: color 0.3s;
-        &:hover {
-            color: #de2b24;
-        }
     }
 
     &__text-top {
