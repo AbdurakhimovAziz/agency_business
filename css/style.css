@@ -391,6 +391,7 @@ body {
   border: 1px solid #f8cd53;
   font-size: 23px;
   font-weight: 700;
+  text-transform: uppercase;
   padding: 20px 35px;
   margin-top: 30px;
   -webkit-transition: all 0.3s;
@@ -419,6 +420,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   color: #fff;
   z-index: 33;
 }
@@ -432,5 +434,88 @@ body {
 .hero__text {
   font-size: 30px;
   font-weight: 300;
+}
+
+.heading {
+  text-align: center;
+  color: #424242;
+}
+
+.heading__title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.heading__text {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.heading::after {
+  content: '';
+  display: block;
+  width: 47px;
+  height: 5px;
+  margin: 14px auto 0;
+  background-color: #424242;
+}
+
+.about {
+  padding: 110px 0;
+  color: #424242;
+}
+
+.about__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 40px -52px 0;
+}
+
+.about__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  padding: 0 52px;
+  margin: 0 auto;
+}
+
+.features__img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.features__img img {
+  width: 100%;
+}
+
+.features__title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 1.3em;
+}
+
+.features__text {
+  font-family: 'Open Sans';
+  font-size: 14px;
+  font-weight: 400;
+  color: #5c5c5c;
+  margin-top: 1em;
+  line-height: 1.6;
+}
+
+.approach {
+  background-color: #f3f3f3;
+  padding: 90px 0 130px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -44,6 +44,7 @@ body {
         border: 1px solid #f8cd53;
         font-size: 23px;
         font-weight: 700;
+        text-transform: uppercase;
         padding: 20px 35px;
         margin-top: 30px;
         transition: all 0.3s;
@@ -55,13 +56,13 @@ body {
     }
 
     &__body {
-        // position: relative;
         background: rgba(18, 135, 191, 0.15);
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
         color: #fff;
         z-index: 33;
     }
@@ -75,5 +76,116 @@ body {
     &__text {
         font-size: 30px;
         font-weight: 300;
+    }
+}
+
+.heading {
+    text-align: center;
+    color: #424242;
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    &__text {
+        font-size: 20px;
+        font-weight: 300;
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 47px;
+        height: 5px;
+        margin: 14px auto 0;
+        background-color: #424242;
+    }
+}
+.about {
+    padding: 110px 0;
+    color: #424242;
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 40px -52px 0;
+    }
+
+    &__item {
+        flex: 0 0 33.333%;
+        padding: 0 52px;
+        margin: 0 auto;
+    }
+}
+
+.features {
+    &__img {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 700;
+        margin-top: 1.3em;
+    }
+
+    &__text {
+        font-family: 'Open Sans';
+        font-size: 14px;
+        font-weight: 400;
+        color: #5c5c5c;
+        margin-top: 1em;
+        line-height: 1.6;
+    }
+}
+
+.approach {
+    background-color: #f3f3f3;
+    padding: 90px 0 130px;
+    &__header {
+    }
+
+    &__title {
+    }
+
+    &__text {
+    }
+
+    &__body {
+    }
+
+    &__item {
+    }
+}
+.heading {
+    &__title {
+    }
+
+    &__text {
+    }
+}
+.step {
+    &__img {
+    }
+
+    &__body {
+    }
+
+    &__text {
+    }
+
+    &__count {
+    }
+
+    &__num {
+    }
+
+    &__count-text {
     }
 }
