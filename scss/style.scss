@@ -82,6 +82,7 @@ body {
 .heading {
     text-align: center;
     color: #424242;
+    margin-bottom: 45px;
     &__title {
         font-size: 36px;
         font-weight: 700;
@@ -109,7 +110,7 @@ body {
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
-        margin: 40px -52px 0;
+        margin: 0 -52px;
     }
 
     &__item {
@@ -158,34 +159,84 @@ body {
     }
 
     &__body {
+        display: flex;
+        flex-direction: column;
     }
 
     &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__item-reverse {
+        flex-direction: row-reverse;
     }
 }
-.heading {
-    &__title {
-    }
 
-    &__text {
-    }
-}
 .step {
+    background-color: #fff;
+    box-shadow: 0 0 5px #e2e2e2;
     &__img {
+        flex: 1 0 33.333%;
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
     }
 
     &__body {
+        position: relative;
+        flex: 1 0 66.667%;
+        padding: 15px 75px;
     }
-
+    &__heading {
+        color: #424242;
+        font-family: 'Helvetica Bold';
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+        margin-bottom: 13px;
+    }
     &__text {
+        color: #5c5c5c;
+        font-family: 'Open Sans';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6;
     }
 
     &__count {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 101px;
+        height: 101px;
+        border: 2px solid #ffffff;
+        border-radius: 4px;
+        background-color: #de2b24;
+        color: #fff;
+        z-index: 30;
+    }
+    &__count-left {
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+    &__count-right {
+        right: 0;
+        transform: translate(50%, -50%);
     }
 
     &__num {
+        font-family: Georgia;
+        font-size: 60px;
+        font-weight: 700;
     }
 
     &__count-text {
+        font-family: 'Helvetica - Normal';
+        font-size: 20px;
+        font-weight: 400;
     }
 }
