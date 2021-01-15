@@ -354,6 +354,14 @@ body {
   min-height: 100vh;
 }
 
+.reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+/* button styles */
 .btn {
   background-color: #de2b24;
   display: -webkit-box;
@@ -380,6 +388,7 @@ body {
   border: 1px solid #de2b24;
 }
 
+/* ================== HERO SECTION  ===================  */
 .hero {
   min-width: 100vw;
   height: 600px;
@@ -436,6 +445,7 @@ body {
   font-weight: 300;
 }
 
+/* -----------------------   HEADINGS STYLES ----------------------- */
 .heading {
   text-align: center;
   color: #424242;
@@ -462,6 +472,7 @@ body {
   background-color: #424242;
 }
 
+/* ==================== ABOUT SECTION ==================== */
 .about {
   padding: 110px 0;
   color: #424242;
@@ -490,6 +501,11 @@ body {
   margin: 0 auto;
 }
 
+/* -----------------------  FEATURES STYLES ----------------------- */
+.features {
+  text-align: center;
+}
+
 .features__img {
   width: 80px;
   height: 80px;
@@ -515,6 +531,7 @@ body {
   line-height: 1.6;
 }
 
+/* ==============   APPROACH SECTION ====================== */
 .approach {
   background-color: #f3f3f3;
   padding: 90px 0 130px;
@@ -540,13 +557,7 @@ body {
   margin-bottom: 40px;
 }
 
-.approach__item-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-}
-
+/* ------------------------- STEP STYLES-------------------------  */
 .step {
   background-color: #fff;
   -webkit-box-shadow: 0 0 5px #e2e2e2;
@@ -634,5 +645,86 @@ body {
   font-family: 'Helvetica - Normal';
   font-size: 20px;
   font-weight: 400;
+}
+
+/*========================= WORK SECTION ========================= */
+.work {
+  background-color: #de2b24;
+  padding: 110px 0 70px;
+}
+
+.work__heading {
+  color: #ffffff;
+}
+
+.work__heading::after {
+  background-color: #fff;
+}
+
+.work__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.work__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+/*---------------------------- PROJECT STYLES ---------------------------- */
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  background-color: #f35e59;
+  font-size: 26px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.project__icon {
+  opacity: 0.5;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.project__title {
+  text-transform: capitalize;
+}
+
+.project__text {
+  font-size: 16px;
+}
+
+.project__img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.project__img img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

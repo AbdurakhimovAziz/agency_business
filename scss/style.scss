@@ -16,6 +16,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+
+.reverse {
+    flex-direction: row-reverse;
+}
+/* button styles */
 .btn {
     background-color: #de2b24;
     display: flex;
@@ -33,7 +38,7 @@ body {
         border: 1px solid#de2b24;
     }
 }
-
+/* ================== HERO SECTION  ===================  */
 .hero {
     min-width: 100vw;
     height: 600px;
@@ -78,7 +83,7 @@ body {
         font-weight: 300;
     }
 }
-
+/* -----------------------   HEADINGS STYLES ----------------------- */
 .heading {
     text-align: center;
     color: #424242;
@@ -101,6 +106,7 @@ body {
         background-color: #424242;
     }
 }
+/* ==================== ABOUT SECTION ==================== */
 .about {
     padding: 110px 0;
     color: #424242;
@@ -119,8 +125,9 @@ body {
         margin: 0 auto;
     }
 }
-
+/* -----------------------  FEATURES STYLES ----------------------- */
 .features {
+    text-align: center;
     &__img {
         width: 80px;
         height: 80px;
@@ -145,19 +152,10 @@ body {
         line-height: 1.6;
     }
 }
-
+/* ==============   APPROACH SECTION ====================== */
 .approach {
     background-color: #f3f3f3;
     padding: 90px 0 130px;
-    &__header {
-    }
-
-    &__title {
-    }
-
-    &__text {
-    }
-
     &__body {
         display: flex;
         flex-direction: column;
@@ -168,11 +166,8 @@ body {
         align-items: center;
         margin-bottom: 40px;
     }
-    &__item-reverse {
-        flex-direction: row-reverse;
-    }
 }
-
+/* ------------------------- STEP STYLES-------------------------  */
 .step {
     background-color: #fff;
     box-shadow: 0 0 5px #e2e2e2;
@@ -238,5 +233,61 @@ body {
         font-family: 'Helvetica - Normal';
         font-size: 20px;
         font-weight: 400;
+    }
+}
+
+/*========================= WORK SECTION ========================= */
+.work {
+    background-color: #de2b24;
+    padding: 110px 0 70px;
+    &__heading {
+        color: #ffffff;
+        &::after {
+            background-color: #fff;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        flex: 0 1 50%;
+    }
+}
+/*---------------------------- PROJECT STYLES ---------------------------- */
+.project {
+    display: flex;
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        flex: 0 1 50%;
+        background-color: #f35e59;
+
+        font-size: 26px;
+        line-height: 1.2;
+        font-weight: 700;
+        color: #ffffff;
+    }
+    &__icon {
+        opacity: 0.5;
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+    &__title {
+        text-transform: capitalize;
+    }
+    &__text {
+        font-size: 16px;
+    }
+
+    &__img {
+        flex: 0 1 50%;
+        img {
+            width: 100%;
+        }
     }
 }
