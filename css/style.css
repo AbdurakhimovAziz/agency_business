@@ -733,7 +733,8 @@ body {
 }
 
 .details__wrapper {
-  max-width: 685px;
+  max-width: 655px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -911,7 +912,7 @@ body {
   border: 1px solid #1287bf;
 }
 
-.form input[type="button"] {
+.form input[type="submit"] {
   line-height: 1.2;
   text-transform: uppercase;
   cursor: pointer;
