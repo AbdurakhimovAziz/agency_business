@@ -333,7 +333,7 @@ h6 {
 }
 
 body {
-  font-family: 'Helvetica Neue';
+  font-family: "Helvetica Neue";
 }
 
 .container {
@@ -462,7 +462,7 @@ body {
 }
 
 .heading::after {
-  content: '';
+  content: "";
   display: block;
   width: 47px;
   height: 5px;
@@ -521,7 +521,7 @@ body {
 }
 
 .features__text {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 14px;
   font-weight: 400;
   color: #5c5c5c;
@@ -584,7 +584,7 @@ body {
 
 .step__heading {
   color: #424242;
-  font-family: 'Helvetica Bold';
+  font-family: "Helvetica Bold";
   font-size: 18px;
   font-weight: 700;
   line-height: 1.4;
@@ -593,7 +593,7 @@ body {
 
 .step__text {
   color: #5c5c5c;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-size: 14px;
   font-weight: 400;
   line-height: 1.6;
@@ -640,7 +640,7 @@ body {
 }
 
 .step__count-text {
-  font-family: 'Helvetica - Normal';
+  font-family: "Helvetica - Normal";
   font-size: 20px;
   font-weight: 400;
 }
@@ -786,10 +786,11 @@ body {
   background-color: #fff;
   margin-top: 55px;
   text-align: center;
+  /*  white triangle */
 }
 
 .details__body::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 50%;
@@ -802,6 +803,42 @@ body {
   border-bottom: 30px solid #fff;
 }
 
+.details__cross {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #de2b24;
+  border: 2px solid #ffffff;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.details__cross svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+
+.details__cross:hover, .details__cross:active {
+  background-color: #bb251f;
+}
+
+/* -------------------------- ARROW ------------------------------ */
 .arrow {
   display: inline-block;
   width: 20px;
@@ -810,10 +847,11 @@ body {
   border-left: 3px solid #fff;
   -webkit-transition: all 0.25 ease-in-out;
   transition: all 0.25 ease-in-out;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
 }
 
+/* -------------------------- FORM ------------------------------ */
 .form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -873,7 +911,7 @@ body {
   border: 1px solid #1287bf;
 }
 
-.form input[type='button'] {
+.form input[type="button"] {
   line-height: 1.2;
   text-transform: uppercase;
   cursor: pointer;
