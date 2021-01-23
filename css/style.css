@@ -141,6 +141,7 @@ h6 {
 }
 
 .header__main {
+  position: relative;
   background-color: #fff;
 }
 
@@ -324,6 +325,30 @@ h6 {
 
 .nav__btn {
   padding: 12px 22px;
+}
+
+.burger {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.burger__line {
+  width: 35px;
+  height: 5px;
+  background-color: #424242;
+  margin-bottom: 4px;
+}
+
+.burger__line:last-child {
+  margin-bottom: 0;
+}
+
+.burger.active .burger__line {
+  background-color: #fff;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 body {
