@@ -333,8 +333,8 @@ h6 {
     top: 0;
     right: 0;
     z-index: 10;
-    -webkit-transform: translate(100%, 15%);
-            transform: translate(100%, 15%);
+    -webkit-transform: translate(100%, 20%);
+            transform: translate(100%, 20%);
     background-color: #fff;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -343,17 +343,20 @@ h6 {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    height: 100vh;
+    height: 80vh;
     padding: 20px;
     text-align: center;
     font-size: 26px;
+    overflow-y: scroll;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    overflow: hidden;
   }
   .nav__list-item {
     margin-right: 0;
     margin-bottom: 50px;
+  }
+  .nav__list-item:last-child {
+    margin-bottom: 0;
   }
   .nav__list-item::before {
     display: none;
@@ -409,8 +412,12 @@ h6 {
 }
 
 .nav__list.active {
-  -webkit-transform: translate(0, 15%);
-          transform: translate(0, 15%);
+  -webkit-transform: translate(0, 20%);
+          transform: translate(0, 20%);
+}
+
+body.disabled {
+  overflow: hidden;
 }
 
 body {
@@ -1098,7 +1105,8 @@ body {
 .subscribe input[type="email"] {
   display: block;
   margin: 0 auto;
-  width: 683px;
+  max-width: 683px;
+  width: 100%;
   text-transform: capitalize;
   padding: 20px;
   background-color: #515151;
