@@ -167,6 +167,12 @@ h6 {
           align-items: center;
 }
 
+@media (max-width: 576px) {
+  .header__row {
+    padding: 20px 0;
+  }
+}
+
 .sup-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,7 +183,7 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1rem 0;
+  padding: 10px 0;
   font-size: 15px;
 }
 
@@ -251,6 +257,12 @@ h6 {
   background-color: #0b5577;
 }
 
+@media (max-width: 576px) {
+  .sup-header__text {
+    font-size: 0;
+  }
+}
+
 .logo__img {
   width: 75px;
   height: 50px;
@@ -273,6 +285,19 @@ h6 {
 .logo__text-bot {
   font-size: 15px;
   font-weight: 400;
+}
+
+@media (max-width: 576px) {
+  .logo__img {
+    width: 65px;
+    height: 40px;
+  }
+  .logo__text-top {
+    font-size: 24px;
+  }
+  .logo__text-bot {
+    font-size: 12px;
+  }
 }
 
 .nav__list {
@@ -327,7 +352,7 @@ h6 {
   padding: 12px 22px;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 992px) {
   .nav__list {
     position: absolute;
     top: 0;
@@ -363,6 +388,14 @@ h6 {
   }
 }
 
+@media (max-width: 768px) {
+  .nav__list {
+    -webkit-transform: translate(100%, 15%);
+            transform: translate(100%, 15%);
+    font-size: 20px;
+  }
+}
+
 .burger {
   position: absolute;
   top: 50px;
@@ -387,9 +420,15 @@ h6 {
   margin-bottom: 0;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 992px) {
   .burger {
     display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .burger {
+    top: 28px;
   }
 }
 
@@ -414,6 +453,13 @@ h6 {
 .nav__list.active {
   -webkit-transform: translate(0, 20%);
           transform: translate(0, 20%);
+}
+
+@media (max-width: 576px) {
+  .nav__list.active {
+    -webkit-transform: translate(0, 15%);
+            transform: translate(0, 15%);
+  }
 }
 
 body.disabled {
@@ -499,6 +545,20 @@ body {
   color: #f8cd53;
 }
 
+@media (max-width: 768px) {
+  .hero_btn {
+    padding: 15px 25px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero_btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
 .hero__body {
   background: rgba(18, 135, 191, 0.15);
   height: 100%;
@@ -526,9 +586,33 @@ body {
   margin-bottom: 5spx;
 }
 
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__title {
+    font-size: 36px;
+  }
+}
+
 .hero__text {
   font-size: 30px;
   font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .hero__text {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero__text {
+    font-size: 20px;
+  }
 }
 
 /* -----------------------   HEADINGS STYLES ----------------------- */
