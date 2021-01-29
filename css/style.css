@@ -637,6 +637,12 @@ body {
   background-color: #424242;
 }
 
+@media (max-width: 992px) {
+  .heading__title {
+    font-size: 34px;
+  }
+}
+
 @media (max-width: 768px) {
   .heading__title {
     font-size: 32px;
@@ -783,6 +789,18 @@ body {
   margin-bottom: 40px;
 }
 
+@media (max-width: 768px) {
+  .approach {
+    padding: 50px 0;
+  }
+  .approach__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 /* ------------------------- STEP STYLES-------------------------  */
 .step {
   background-color: #fff;
@@ -872,6 +890,40 @@ body {
   font-family: 'Helvetica - Normal';
   font-size: 20px;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .step {
+    background-color: transparent;
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+  }
+  .step__img {
+    width: 200px;
+  }
+  .step__body {
+    text-align: center;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 5px #e2e2e2;
+            box-shadow: 0 0 5px #e2e2e2;
+    margin-top: 20px;
+    padding-left: 120px;
+  }
+  .step__count {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+}
+
+@media (max-width: 576px) {
+  .step__body {
+    padding: 15px 30px;
+  }
+  .step__count {
+    display: none;
+  }
 }
 
 /*========================= WORK SECTION ========================= */
