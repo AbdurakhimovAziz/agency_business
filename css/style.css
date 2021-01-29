@@ -1062,10 +1062,18 @@ body {
   width: 18px;
   height: 18px;
   fill: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .details__cross:hover, .details__cross:active {
-  background-color: #bb251f;
+  border-color: #de2b24;
+  background-color: #fff;
+}
+
+.details__cross:hover svg,
+.details__cross:active svg {
+  fill: #de2b24;
 }
 
 /* -------------------------- ARROW ------------------------------ */
@@ -1299,4 +1307,3 @@ body {
 .subscribe input[type="submit"]:hover, .subscribe input[type="submit"]:focus {
   border: 2px solid #de2b24;
 }
-/*# sourceMappingURL=style.css.map */
