@@ -657,7 +657,7 @@ body {
     font-size: 28px;
   }
   .heading__text {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -954,6 +954,28 @@ body {
           flex: 0 1 50%;
 }
 
+@media (max-width: 768px) {
+  .work {
+    padding: 50px 30px;
+  }
+  .work__body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .work__item {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .work {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 /*---------------------------- PROJECT STYLES ---------------------------- */
 .project {
   display: -webkit-box;
@@ -995,6 +1017,7 @@ body {
 
 .project__text {
   font-size: 16px;
+  font-weight: 400;
 }
 
 .project__img {
@@ -1005,6 +1028,44 @@ body {
 
 .project__img img {
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .project__info {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0;
+            flex: 1 0;
+  }
+  .project__img {
+    -webkit-box-flex: unset;
+        -ms-flex: unset;
+            flex: unset;
+  }
+}
+
+@media (max-width: 576px) {
+  .project__info {
+    font-size: 22px;
+  }
+  .project__img {
+    width: 200px;
+  }
+}
+
+@media (max-width: 435px) {
+  .project__icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .project__info {
+    font-size: 20px;
+  }
+  .project__text {
+    font-size: 14px;
+  }
+  .project__img {
+    width: 150px;
+  }
 }
 
 /* ======================= DETAILS SECTION ============================ */
@@ -1128,6 +1189,49 @@ body {
   fill: #de2b24;
 }
 
+@media (max-width: 992px) {
+  .details__title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .details {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .details__wrapper {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .details__title {
+    font-size: 32px;
+  }
+  .details__text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .details__title {
+    font-size: 28px;
+  }
+  .details__text {
+    font-size: 16px;
+  }
+  .details__icon {
+    width: 55px;
+    height: 55px;
+  }
+  .details__body {
+    padding: 40px 30px;
+  }
+  .details__cross {
+    width: 40px;
+    height: 40px;
+  }
+}
+
 /* -------------------------- ARROW ------------------------------ */
 .arrow {
   display: inline-block;
@@ -1212,6 +1316,13 @@ body {
   padding: 17px 30px;
 }
 
+@media (max-width: 576px) {
+  .form input[type='submit'] {
+    padding: 15px 25px;
+    font-size: 14px;
+  }
+}
+
 .footer {
   text-align: center;
 }
@@ -1229,6 +1340,13 @@ body {
 .footer__copyright {
   font-family: OpenSans;
   color: #cecece;
+}
+
+@media (max-width: 768px) {
+  .footer__main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .subscribe__title {
@@ -1303,45 +1421,50 @@ body {
   margin-top: 30px;
 }
 
-.subscribe input[type="email"] {
+.subscribe input[type='email'] {
   display: block;
   margin: 0 auto;
   max-width: 683px;
   width: 100%;
+  border: 1px solid #2a2a2a;
   text-transform: capitalize;
   padding: 20px;
   background-color: #515151;
 }
 
-.subscribe input[type="email"]::-webkit-input-placeholder {
+.subscribe input[type='email']::-webkit-input-placeholder {
   font-family: OpenSans;
   font-size: 14px;
   font-weight: 400;
   color: #cecece;
 }
 
-.subscribe input[type="email"]:-ms-input-placeholder {
+.subscribe input[type='email']:-ms-input-placeholder {
   font-family: OpenSans;
   font-size: 14px;
   font-weight: 400;
   color: #cecece;
 }
 
-.subscribe input[type="email"]::-ms-input-placeholder {
+.subscribe input[type='email']::-ms-input-placeholder {
   font-family: OpenSans;
   font-size: 14px;
   font-weight: 400;
   color: #cecece;
 }
 
-.subscribe input[type="email"]::placeholder {
+.subscribe input[type='email']::placeholder {
   font-family: OpenSans;
   font-size: 14px;
   font-weight: 400;
   color: #cecece;
 }
 
-.subscribe input[type="submit"] {
+.subscribe input[type='email']:active, .subscribe input[type='email']:focus {
+  border: 1px solid #de2b24;
+}
+
+.subscribe input[type='submit'] {
   width: 153px;
   height: 53px;
   border: 2px solid #515151;
@@ -1356,6 +1479,16 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.subscribe input[type="submit"]:hover, .subscribe input[type="submit"]:focus {
+.subscribe input[type='submit']:hover, .subscribe input[type='submit']:focus {
   border: 2px solid #de2b24;
+}
+
+@media (max-width: 576px) {
+  .subscribe__title {
+    font-size: 24px;
+  }
+  .subscribe__icon {
+    width: 40px;
+    height: 40px;
+  }
 }
