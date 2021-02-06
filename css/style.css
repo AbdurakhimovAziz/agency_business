@@ -99,6 +99,9 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 button::-moz-focus-inner {
@@ -143,6 +146,7 @@ h6 {
 .header__main {
   position: relative;
   background-color: #fff;
+  z-index: 50;
 }
 
 .header__row {
@@ -400,10 +404,13 @@ h6 {
 
 .burger {
   position: absolute;
-  top: 50px;
   right: 30px;
+  top: 50%;
+  width: 35px;
+  height: 25px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: none;
-  cursor: pointer;
   z-index: 10;
 }
 
@@ -428,26 +435,21 @@ h6 {
   }
 }
 
-@media (max-width: 576px) {
-  .burger {
-    top: 28px;
-  }
-}
-
 .burger.burger-active .burger__line1 {
-  top: 5px;
+  top: 9px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 .burger.burger-active .burger__line2 {
-  display: none;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
 }
 
 .burger.burger-active .burger__line3 {
-  bottom: 5px;
+  bottom: 10px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
 }
@@ -1097,39 +1099,41 @@ body {
 }
 
 .details__icon {
-  position: relative;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
   width: 64px;
   height: 64px;
   border: 3px solid #ffffff;
   border-radius: 50%;
   margin: 0 auto;
   margin-top: 15px;
-  cursor: pointer;
   -webkit-transition: all 0.25 ease-in-out;
   transition: all 0.25 ease-in-out;
 }
 
-.details__icon:hover,
-.details__icon:hover .arrow {
+.details__icon:hover {
   border-color: rgba(255, 250, 250, 0.5);
+}
+
+.details__icon:hover .arrow::after,
+.details__icon:hover .arrow::before {
+  background-color: rgba(255, 250, 250, 0.5);
 }
 
 .details__body {
   position: relative;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  max-height: 0;
   padding: 55px 65px 70px;
   background-color: #fff;
   margin-top: 55px;
   text-align: center;
-  /*  white triangle */
+  -webkit-transition: max-height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .details__body::before {
@@ -1144,6 +1148,15 @@ body {
   border-left: 30px solid transparent;
   border-right: 30px solid transparent;
   border-bottom: 30px solid #fff;
+}
+
+.details__icon.active + .details__body {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.details__body.display {
+  display: block;
 }
 
 .details__cross {
@@ -1234,15 +1247,51 @@ body {
 
 /* -------------------------- ARROW ------------------------------ */
 .arrow {
+  position: relative;
   display: inline-block;
-  width: 20px;
-  height: 20px;
-  border-top: 3px solid #fff;
-  border-left: 3px solid #fff;
-  -webkit-transition: all 0.25 ease-in-out;
-  transition: all 0.25 ease-in-out;
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
+  width: 100%;
+  height: 100%;
+}
+
+.arrow::after, .arrow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.arrow::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: 8px;
+}
+
+.arrow::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  left: 8px;
+}
+
+@media (max-width: 576px) {
+  .arrow::after, .arrow::before {
+    width: 20px;
+  }
+}
+
+.details__icon.active .arrow::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.details__icon.active .arrow::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 /* -------------------------- FORM ------------------------------ */
