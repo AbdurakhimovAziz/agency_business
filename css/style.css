@@ -980,9 +980,19 @@ body {
 
 /*---------------------------- PROJECT STYLES ---------------------------- */
 .project {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.project__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .project__info {
@@ -1023,13 +1033,41 @@ body {
 }
 
 .project__img {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 50%;
           flex: 0 1 50%;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  overflow: hidden;
 }
 
 .project__img img {
   max-width: 100%;
+}
+
+.project__img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(243, 93, 88, 0.4);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition: -webkit-transform 0.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition: transform 0.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition: transform 0.5s cubic-bezier(0.52, 1.64, 0.37, 0.66), -webkit-transform 0.5s cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.project:hover .project__img::after {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 @media (max-width: 768px) {

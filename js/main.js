@@ -27,19 +27,19 @@ document.addEventListener('click', function (e) {
   }
 });
 
-const accordeonIcon = document.querySelector('.details__icon');
-const accordeonBody = document.querySelector('.details__body');
+const accordionIcon = document.querySelector('.details__icon');
+const accordionBody = document.querySelector('.details__body');
 const close = document.querySelector('.details__cross');
 
 function collapse() {
-  accordeonIcon.classList.toggle('active');
-  if (accordeonBody.style.maxHeight) {
-    accordeonBody.style.maxHeight = null;
+  accordionIcon.classList.toggle('active');
+  if (accordionBody.style.maxHeight) {
+    accordionBody.style.maxHeight = null;
   } else {
-    accordeonBody.style.maxHeight = '100%';
+    accordionBody.style.maxHeight = '100%';
   }
 }
 
-accordeonIcon.addEventListener('click', collapse);
+accordionIcon.addEventListener('click', collapse);
 
 close.addEventListener('click', collapse);
