@@ -1111,7 +1111,7 @@ body {
 /* ======================= DETAILS SECTION ============================ */
 .details {
   background-color: #1287bf;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 
 .details__wrapper {
@@ -1166,12 +1166,11 @@ body {
   max-height: 0;
   padding: 55px 65px 70px;
   background-color: #fff;
-  margin-top: 55px;
   text-align: center;
-  -webkit-transition: max-height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: max-height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: max-height 0.3s ease-in-out, margin 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, margin 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out, margin 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, max-height 0.3s ease-in-out, margin 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
 
 .details__body::before {
@@ -1191,6 +1190,8 @@ body {
 .details__icon.active + .details__body {
   -webkit-transform: scale(1);
           transform: scale(1);
+  margin-top: 55px;
+  margin-bottom: 100px;
 }
 
 .details__body.display {
